@@ -9,7 +9,7 @@ namespace Game_Of_Life
     class GameOfLife
     {
         private ConsoleKeyInfo _choice;
-        private bool loop = true;
+        private bool _loop = true;
         private string menu = "";
         public void run()
         {
@@ -24,13 +24,13 @@ namespace Game_Of_Life
                     case ConsoleKey.B:
                         break;
                     case ConsoleKey.Q:
-                        loop = false;
+                        _loop = false;
                         break;
                     default:
                         Console.WriteLine("invalid input, try again!");
                         break;
                 }
-            } while (loop);
+            } while (_loop);
         }
     }
 }
