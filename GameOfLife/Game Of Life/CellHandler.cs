@@ -57,7 +57,7 @@ namespace Game_Of_Life
 
         public int[,] DeadOrAlive(int[,] array)
         {
-            var tempArray = new int[35, 70];
+            var tempArray = new int[array.GetLength(0), array.GetLength(1)];
 
 
 
