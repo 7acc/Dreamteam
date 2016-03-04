@@ -8,7 +8,7 @@ namespace Game_Of_Life
 {
     class CellHandler
     {
-        enum state { dead = 0, alive = 1 };
+        enum State { Dead = 0, Alive = 1 };
 
         Random rnd = new Random();
         public int GenerateRandomNumber()
@@ -26,30 +26,30 @@ namespace Game_Of_Life
             int neighborCount = 0;
 
             if (y != 0)
-                if (array[y - 1, x] == (int)state.alive)
+                if (array[y - 1, x] == (int)State.Alive)
                     neighborCount++;
             if (y != array.GetLength(0) - 1)
-                if (array[y + 1, x] == (int)state.alive)
+                if (array[y + 1, x] == (int)State.Alive)
                     neighborCount++;
             if (x != 0)
-                if (array[y, x - 1] == (int)state.alive)
+                if (array[y, x - 1] == (int)State.Alive)
                     neighborCount++;
             if (x != array.GetLength(1) - 1)
-                if (array[y, x + 1] == (int)state.alive)
+                if (array[y, x + 1] == (int)State.Alive)
                     neighborCount++;
 
             if (y != 0 && x != 0)
-                if (array[y - 1, x - 1] == (int)state.alive)
+                if (array[y - 1, x - 1] == (int)State.Alive)
                     neighborCount++;
             if (y != array.GetLength(0) - 1 && x != 0)
-                if (array[y + 1, x - 1] == (int)state.alive)
+                if (array[y + 1, x - 1] == (int)State.Alive)
                     neighborCount++;
 
             if (y != 0 && x != array.GetLength(1) - 1)
-                if (array[y - 1, x + 1] == (int)state.alive)
+                if (array[y - 1, x + 1] == (int)State.Alive)
                     neighborCount++;
             if (y != array.GetLength(0) - 1 && x != array.GetLength(1) - 1)
-                if (array[y + 1, x + 1] == (int)state.alive)
+                if (array[y + 1, x + 1] == (int)State.Alive)
                     neighborCount++;
 
             return neighborCount;
@@ -67,20 +67,20 @@ namespace Game_Of_Life
                 {
                     var count = CountNeighbors(array,y, x);
 
-                    if (array[y, x] == (int)state.dead && count == 3)
-                        tempArray[y, x] = (int)state.alive;
+                    if (array[y, x] == (int)State.Dead && count == 3)
+                        tempArray[y, x] = (int)State.Alive;
 
-                    else if (array[y, x] == (int)state.alive && count == 2)
-                        tempArray[y, x] = (int)state.alive;
+                    else if (array[y, x] == (int)State.Alive && count == 2)
+                        tempArray[y, x] = (int)State.Alive;
 
-                    else if (array[y, x] == (int)state.alive && count == 3)
-                        tempArray[y, x] = (int)state.alive;
+                    else if (array[y, x] == (int)State.Alive && count == 3)
+                        tempArray[y, x] = (int)State.Alive;
 
-                    else if (array[y, x] == (int)state.alive && count < 2)
-                        tempArray[y, x] = (int)state.dead;
+                    else if (array[y, x] == (int)State.Alive && count < 2)
+                        tempArray[y, x] = (int)State.Dead;
 
-                    else if (array[y, x] == (int)state.alive && count > 3)
-                        tempArray[y, x] = (int)state.dead;
+                    else if (array[y, x] == (int)State.Alive && count > 3)
+                        tempArray[y, x] = (int)State.Dead;
                 }
             }
 
