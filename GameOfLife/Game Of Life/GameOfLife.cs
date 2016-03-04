@@ -12,20 +12,23 @@ namespace Game_Of_Life
         CellHandler newCellhandler = new CellHandler();
         private ConsoleKeyInfo _choice;
         private bool _loop = true;
-        private string _menu = "";
+        private string _menu = "Welcome to Game Of Life\n\nR) Run the game in defaultmode:\n\nC) Create a custom gamemode:\n\nQ) Quit game:";
+        
+
         public void Run()
         {
             do
             {
                 Console.Clear();
+                Console.WriteLine(_menu);
                 _choice = Console.ReadKey(true);
                 switch (_choice.Key)
                 {
-                    case ConsoleKey.A:
+                    case ConsoleKey.R:
                         var defoult = InitializeDefoult();
                         RunGame(defoult);
                         break;
-                    case ConsoleKey.B:
+                    case ConsoleKey.C:
                         var custom = InitializeCustom();
                         RunGame(custom);
                         break;
