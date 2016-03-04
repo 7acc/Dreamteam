@@ -14,7 +14,7 @@ namespace Game_Of_Life
         private int[,] gameBoard;
         CellHandler cellHandler;
 
-        public int MyProperty { get; set; }
+        public int[,] GameBoard { get; set; }
         public int Hight
         {
             set
@@ -43,6 +43,7 @@ namespace Game_Of_Life
             gameBoard = new int[hight, widht];
             cellHandler = new CellHandler();
         }
+        
         public void FillArray(int amount)
         {
             for (int y = 0; y < amount; y++)
