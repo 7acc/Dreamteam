@@ -43,6 +43,11 @@ namespace Game_Of_Life
             gameBoard = new int[hight, widht];
             cellHandler = new CellHandler();
         }
+
+        public Board()
+        {
+            
+        }
         public void FillArray(int amount)
         {
             for (int y = 0; y < amount; y++)

@@ -19,9 +19,10 @@ namespace Game_Of_Life
                 _choice = Console.ReadKey(true);
                 switch (_choice.Key)
                 {
-                    case ConsoleKey.A:
+                    case ConsoleKey.R:
+                        
                         break;
-                    case ConsoleKey.B:
+                    case ConsoleKey.C:
                         break;
                     case ConsoleKey.Q:
                         _loop = false;
