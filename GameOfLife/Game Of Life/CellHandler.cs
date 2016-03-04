@@ -16,7 +16,7 @@ namespace Game_Of_Life
             int randomNumber = rnd.Next(0, 2);
             return randomNumber;
         }
-        public static int GenereateRandomPosition(int from, int to)
+        public int GenereateRandomPosition(int from, int to)
         {
             int randomPosition = rnd.Next(from, to);
             return randomPosition;

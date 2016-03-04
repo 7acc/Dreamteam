@@ -12,6 +12,8 @@ namespace Game_Of_Life
         private int _width;
 
         private int[,] gameBoard;
+        CellHandler cellHandler;
+
         public int MyProperty { get; set; }
         public int Hight
         {
@@ -39,13 +41,14 @@ namespace Game_Of_Life
             this._hight = widht;
 
             gameBoard = new int[hight, widht];
+            cellHandler = new CellHandler();
         }
         public void FillArray(int amount)
         {
             for (int y = 0; y < amount; y++)
             {
-                int row = CellHandler.GenereateRandomPosition(0, gameBoard.GetLength(0));
-                int col = CellHandler.GenereateRandomPosition(0, gameBoard.GetLength(1));
+                int row = cellHandler.GenereateRandomPosition(0, gameBoard.GetLength(0));
+                int col = cellHandler.GenereateRandomPosition(0, gameBoard.GetLength(1));
 
                 if (gameBoard[row, col] == 1)
                 {
