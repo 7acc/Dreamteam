@@ -8,7 +8,7 @@ namespace Game_Of_Life
 {
     class GameOfLife
     {
-        private ConsoleKeyInfo choice;
+        private ConsoleKeyInfo _choice;
         private bool loop = true;
         private string menu = "";
         public void run()
@@ -16,8 +16,8 @@ namespace Game_Of_Life
             do
             {
                 Console.Clear();
-                choice = Console.ReadKey(true);
-                switch (choice.Key)
+                _choice = Console.ReadKey(true);
+                switch (_choice.Key)
                 {
                     case ConsoleKey.A:
                         break;
