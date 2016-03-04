@@ -44,17 +44,17 @@ namespace Game_Of_Life
         {
             for (int y = 0; y < amount; y++)
             {
-                int row = rnd.Next(0, array.GetLength(0));
-                int col = rnd.Next(0, array.GetLength(1));
+                int row = CellHandler.GenereateRandomPosition(0, gameBoard.GetLength(0));
+                int col = CellHandler.GenereateRandomPosition(0, gameBoard.GetLength(1));
 
-                if (array[row, col] == (int)state.alive)
+                if (gameBoard[row, col] == 1)
                 {
                     y--;
 
                 }
                 else
                 {
-                    array[row, col] = (int)state.alive;
+                    gameBoard[row, col] = 1;
                 }
             }
         }
