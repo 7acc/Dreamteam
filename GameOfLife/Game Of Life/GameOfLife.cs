@@ -10,8 +10,8 @@ namespace Game_Of_Life
     {
         private ConsoleKeyInfo _choice;
         private bool _loop = true;
-        private string menu = "";
-        public void run()
+        private string _menu = "";
+        public void Run()
         {
             do
             {

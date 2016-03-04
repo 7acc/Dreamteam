@@ -8,8 +8,8 @@ namespace Game_Of_Life
 {
     class Board
     {
-        private int hight;
-        private int width;
+        private int _hight;
+        private int _width;
 
         private int[,] gameBoard;
         public int MyProperty { get; set; }
@@ -18,25 +18,25 @@ namespace Game_Of_Life
             set
             {
                 if (value > 0)
-                    this.hight = value;
+                    this._hight = value;
             }
-            get { return hight; }
+            get { return _hight; }
         }
         public int Width
         {
             set
             {
                 if (value > 0)
-                    this.hight = value;
+                    this._hight = value;
             }
-            get { return hight; }
+            get { return _hight; }
         }
 
 
         public Board(int hight, int widht)
         {
-            this.hight = hight;
-            this.hight = widht;
+            this._hight = hight;
+            this._hight = widht;
 
             gameBoard = new int[hight, widht];
         }
@@ -86,7 +86,7 @@ namespace Game_Of_Life
         }
         public string PrintArray()
         {
-            StringBuilder NextState = new StringBuilder();
+            StringBuilder nextState = new StringBuilder();
 
             for (int y = 0; y < gameBoard.GetLength(0); y++)
             {
@@ -94,7 +94,7 @@ namespace Game_Of_Life
                 {
                     if (x == gameBoard.GetLength(1))
                     {
-                        NextState.Append("\n");
+                        nextState.Append("\n");
                     }
                     //else if (gameBoard[y, x] == 10)
                     //{
@@ -102,16 +102,16 @@ namespace Game_Of_Life
                     //}
                     else if (gameBoard[y, x] == 1)
                     {
-                        NextState.Append("██");
+                        nextState.Append("██");
                     }
                     else if (gameBoard[y, x] == 0)
                     {
-                        NextState.Append("  ");
+                        nextState.Append("  ");
 
                     }
                 }
             }
-            return NextState.ToString();
+            return nextState.ToString();
         }
     }
 }
