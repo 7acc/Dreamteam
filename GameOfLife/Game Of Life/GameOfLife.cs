@@ -59,8 +59,8 @@ namespace Game_Of_Life
                 Console.WriteLine(cellGeneration);
 
                 Thread.Sleep(300);
-                
-               var gameboard =  newCellhandler.DeadOrAlive(game.GameBoard);
+
+                var gameboard = newCellhandler.DeadOrAlive(game.GameBoard);
 
                 game.GameBoard = gameboard;              
                
