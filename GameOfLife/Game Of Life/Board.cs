@@ -15,6 +15,7 @@ namespace Game_Of_Life
         CellHandler cellHandler;
 
         public int[,] GameBoard { get; set; }
+
         public int Hight
         {
             set
