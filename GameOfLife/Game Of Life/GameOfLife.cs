@@ -26,7 +26,8 @@ namespace Game_Of_Life
                         RunGame(defoult);
                         break;
                     case ConsoleKey.B:
-
+                        var custom = InitializeCustom();
+                        RunGame(custom);
                         break;
                     case ConsoleKey.Q:
                         _loop = false;
@@ -38,12 +39,24 @@ namespace Game_Of_Life
             } while (_loop);
         }
 
-        //public Board InitializeCustom()
-        //{
-            
-        //    Board NewBoard = new Board();
-            
-        //}
+        public Board InitializeCustom()
+        {
+            Console.WriteLine("Enter desired hight and width of the playfield.");
+            var hight = int.Parse(Console.ReadLine());
+            var width = int.Parse(Console.ReadLine());
+
+            Board NewBoard = new Board(hight,width);
+
+            Console.WriteLine("How many cells do you want play with ?");
+            var numberOfCells = int.Parse(Console.ReadLine());
+            if (numberOfCells >(NewBoard.Hight*NewBoard.Width))
+            {
+                numberOfCells = NewBoard.Hight*NewBoard.Width;
+            }
+            NewBoard.FillArray(numberOfCells);
+            return NewBoard;
+
+        }
         public Board InitializeDefoult()
         {
             Board DefoultBoard = new Board(20, 40);
@@ -66,5 +79,6 @@ namespace Game_Of_Life
                
             }
         }
+        
     }
 }
