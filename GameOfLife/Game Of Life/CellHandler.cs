@@ -61,48 +61,48 @@ namespace Game_Of_Life
 
 
 
+            //for (int y = 0; y < array.GetLength(0); y++)
+            //{
+            //    for (int x = 0; x < array.GetLength(1); x++)
+            //    {
+            //        var count = CountNeighbors(array,y, x);
+
+            //        if (array[y, x] == (int)State.Dead && count == 3)
+            //            tempArray[y, x] = (int)State.Alive;
+
+            //        else if (array[y, x] == (int)State.Alive && count == 2)
+            //            tempArray[y, x] = (int)State.Alive;
+
+            //        else if (array[y, x] == (int)State.Alive && count == 3)
+            //            tempArray[y, x] = (int)State.Alive;
+
+            //        else if (array[y, x] == (int)State.Alive && count < 2)
+            //            tempArray[y, x] = (int)State.Dead;
+
+            //        else if (array[y, x] == (int)State.Alive && count > 3)
+            //            tempArray[y, x] = (int)State.Dead;
+            //    }
+            //}
+
             for (int y = 0; y < array.GetLength(0); y++)
+
             {
+
                 for (int x = 0; x < array.GetLength(1); x++)
+
                 {
                     var count = CountNeighbors(array,y, x);
 
                     if (array[y, x] == (int)State.Dead && count == 3)
+                        tempArray[y, x] = 1;
+
+                    if (array[y, x] == (int)State.Alive && (count == 2 || count == 3))
                         tempArray[y, x] = (int)State.Alive;
 
-                    else if (array[y, x] == (int)State.Alive && count == 2)
-                        tempArray[y, x] = (int)State.Alive;
 
-                    else if (array[y, x] == (int)State.Alive && count == 3)
-                        tempArray[y, x] = (int)State.Alive;
-
-                    else if (array[y, x] == (int)State.Alive && count < 2)
-                        tempArray[y, x] = (int)State.Dead;
-
-                    else if (array[y, x] == (int)State.Alive && count > 3)
-                        tempArray[y, x] = (int)State.Dead;
                 }
+
             }
-
-            //for (int y = 0; y < array.GetLength(0); y++)
-
-            //{
-
-            //    for (int x = 0; x < array.GetLength(1); x++)
-
-            //    {
-            //        var count = CountNeighbors(y, x);
-
-            //        if (array[y, x] == (int)state.dead && count == 3)
-            //            tempArray[y, x] = (int)state.alive;
-
-            //        if (array[y, x] == (int)state.alive && (count == 2 || count == 3))
-            //            tempArray[y, x] = (int)state.alive;
-
-
-            //    }
-
-            //}
             return tempArray;
         }
     }
