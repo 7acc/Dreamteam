@@ -60,9 +60,9 @@ namespace Game_Of_Life
 
                 Thread.Sleep(300);
 
-                var gameboard = newCellhandler.DeadOrAlive(game.GameBoard);
+                var newGameboard = newCellhandler.DeadOrAlive(game.GetArray());
 
-                game.GameBoard = gameboard;              
+                game.GameBoard = newGameboard;          
                
             }
         }

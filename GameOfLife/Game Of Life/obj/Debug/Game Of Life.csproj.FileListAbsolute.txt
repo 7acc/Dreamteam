@@ -6,3 +6,8 @@ C:\Users\Sture\Documents\GitHub\Exercises\GameOfLife\Dreamteam\GameOfLife\Game O
 C:\Users\Sture\Documents\GitHub\Exercises\GameOfLife\Dreamteam\GameOfLife\Game Of Life\obj\Debug\Game Of Life.csprojResolveAssemblyReference.cache
 C:\Users\Sture\Documents\GitHub\Exercises\GameOfLife\Dreamteam\GameOfLife\Game Of Life\obj\Debug\Game Of Life.exe
 C:\Users\Sture\Documents\GitHub\Exercises\GameOfLife\Dreamteam\GameOfLife\Game Of Life\obj\Debug\Game Of Life.pdb
+C:\Users\annah\Documents\GitHub\dreamteam\gameoflife\Game Of Life\bin\Debug\Game Of Life.exe
+C:\Users\annah\Documents\GitHub\dreamteam\gameoflife\Game Of Life\bin\Debug\Game Of Life.pdb
+C:\Users\annah\Documents\GitHub\dreamteam\gameoflife\Game Of Life\obj\Debug\Game Of Life.csprojResolveAssemblyReference.cache
+C:\Users\annah\Documents\GitHub\dreamteam\gameoflife\Game Of Life\obj\Debug\Game Of Life.exe
+C:\Users\annah\Documents\GitHub\dreamteam\gameoflife\Game Of Life\obj\Debug\Game Of Life.pdb

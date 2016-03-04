@@ -11,10 +11,16 @@ namespace Game_Of_Life
         private int _hight;
         private int _width;
 
-        private int[,] gameBoard;
+       private int[,] gameBoard;
         CellHandler cellHandler;
 
-        public int[,] GameBoard { get; set; }
+        public int[,] GameBoard
+        {
+            set { this.gameBoard = value; }
+        }
+           
+          
+          
 
         public int Hight
         {
