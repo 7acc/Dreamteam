@@ -38,7 +38,7 @@ namespace Game_Of_Life
             this.hight = hight;
             this.hight = widht;
 
-            gameBoard = new int[hight, widht];           
+            gameBoard = new int[hight, widht];
         }
         public void FillArray(int amount)
         {
@@ -86,8 +86,32 @@ namespace Game_Of_Life
         }
         public string PrintArray()
         {
-            St
-            return;
+            StringBuilder NextState = new StringBuilder();
+
+            for (int y = 0; y < gameBoard.GetLength(0); y++)
+            {
+                for (int x = 0; x <= gameBoard.GetLength(1); x++)
+                {
+                    if (x == gameBoard.GetLength(1))
+                    {
+                        NextState.Append("\n");
+                    }
+                    //else if (gameBoard[y, x] == 10)
+                    //{
+                    //    Console.Write("O");
+                    //}
+                    else if (gameBoard[y, x] == 1)
+                    {
+                        NextState.Append("██");
+                    }
+                    else if (gameBoard[y, x] == 0)
+                    {
+                        NextState.Append("  ");
+
+                    }
+                }
+            }
+            return NextState.ToString();
         }
     }
 }
