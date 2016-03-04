@@ -44,6 +44,11 @@ namespace Game_Of_Life
             gameBoard = new int[hight, widht];
             cellHandler = new CellHandler();
         }
+
+        public Board()
+        {
+            
+        }
         
         public void FillArray(int amount)
         {
@@ -89,6 +94,11 @@ namespace Game_Of_Life
                 }
             }
         }
+
+        public int[,] GetArray()
+        {
+            return gameBoard;
+        } 
         public string PrintArray()
         {
             StringBuilder nextState = new StringBuilder();
