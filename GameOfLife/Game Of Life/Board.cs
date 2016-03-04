@@ -92,6 +92,11 @@ namespace Game_Of_Life
                 }
             }
         }
+
+        public int[,] GetArray()
+        {
+            return gameBoard;
+        } 
         public string PrintArray()
         {
             StringBuilder nextState = new StringBuilder();
